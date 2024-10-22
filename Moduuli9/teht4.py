@@ -1,26 +1,24 @@
 import random
 
 class Auto:
-
     tehty = 0
-
     def __init__(self, rekisteritunnus, huippunopeus, nopeus=0, matka=0):
         self.rekisteritunnus = rekisteritunnus
-        self.huippunopeus = float(huippunopeus)
-        self.nopeus = float(nopeus)
-        self.matka = float(matka)
+        self.huippunopeus = int(huippunopeus)
+        self.nopeus = int(nopeus)
+        self.matka = int(matka)
         Auto.tehty += 1
 
     def kiihdytä(self, nopeuden_muutos):
-        self.nopeus += float(nopeuden_muutos)
-        if float(self.nopeus) <= 0:
+        self.nopeus += int(nopeuden_muutos)
+        if int(self.nopeus) <= 0:
             self.nopeus = 0
-        elif float(self.nopeus) >= float(self.huippunopeus):
+        elif int(self.nopeus) >= int(self.huippunopeus):
             self.nopeus = self.huippunopeus
         return
 
     def kulje(self, tuntia):
-        self.matka += float(tuntia) * float(self.nopeus)
+        self.matka += int(tuntia) * int(self.nopeus)
 
 autot = []
 for i in range(10):
