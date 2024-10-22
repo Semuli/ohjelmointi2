@@ -23,4 +23,3 @@ auto1 = Auto("ABC-123","142", 60, 2000)
 auto1.kulje(1.5)
 
 print(f"Rekisterinumero: {auto1.rekisteitunnus}\nHuippunopeus: {auto1.huippunopeus}KM/H\nNopeus: {auto1.nopeus}KM/H\nMatka: {auto1.matka}KM")
-
