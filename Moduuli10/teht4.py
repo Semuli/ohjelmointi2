@@ -27,6 +27,7 @@ class Kilpailu:
         self.autot = autot
         self.nimi = nimi
         self.pituus = pituus
+        self.voittaja = Auto(1,2,3,4)
 
     pisin_matka = 0
     tuntia = 0
@@ -39,6 +40,7 @@ class Kilpailu:
         for auto in self.autot:
             if auto.matka > self.pisin_matka:
                 self.pisin_matka = auto.matka
+                self.voittaja = auto
         self.tuntia += 1
 
     def tulosta_tilanne(self):
@@ -71,7 +73,7 @@ while k.kilpailu_ohi() == False:
     k.tulosta_tilanne()
     k.kilpailu_ohi()
 
-
+print(k.voittaja.rekisteritunnus)
 
 
 
