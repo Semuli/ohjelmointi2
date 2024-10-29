@@ -14,5 +14,3 @@ try:
         print(f'{str.capitalize(paikkakunta)} sää: {json_vastaus["weather"][0]["description"]}\nlämpötila: {json_vastaus["main"]["temp"]}C')
 except requests.exceptions.RequestException as e:
     print ("Hakua ei voitu suorittaa.")
-
-
