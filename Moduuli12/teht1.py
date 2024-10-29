@@ -1,8 +1,6 @@
 import requests
-import json
 
 pyyntö = "https://api.chucknorris.io/jokes/random"
-
 
 try:
     vastaus = requests.get(pyyntö)
