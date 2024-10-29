@@ -1,7 +1,7 @@
 import requests
 import json
 
-apikey = input("Anna api key: ")
+apikey = input("Anna api-key: ")
 
 paikkakunta = input("Kerro paikkakunta:")
 
