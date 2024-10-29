@@ -2,6 +2,12 @@ import requests
 import json
 
 pyyntö = "https://api.chucknorris.io/jokes/random"
-vastaus = requests.get(pyyntö).json()
 
-print(vastaus["value"])
+
+try:
+    vastaus = requests.get(pyyntö)
+    if vastaus.status_code==200:
+        json_vastaus = vastaus.json()
+        print(json_vastaus["value"])
+except requests.exceptions.RequestException as e:
+    print ("Hakua ei voitu suorittaa.")
